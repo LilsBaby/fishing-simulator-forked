@@ -1,16 +1,7 @@
-import { Service, OnStart, OnInit } from "@flamework/core";
-<<<<<<< HEAD
-import { Players } from "@rbxts/services";
 
-@Service({})
-export class FishingService implements OnStart, OnInit {
-	onStart() {}
 
-	onInit(): void | Promise<void> {}
-
-	public giveRod(playerEntity: PlayerEntity) {}
-=======
 import PlayerEntity from "../player/player-entity";
+import { Service, OnStart, OnInit } from "@flamework/core";
 import { Conditioner } from "shared/utils/conditioner";
 import { Timer } from "@rbxts/timer";
 import { Events } from "server/network";
@@ -64,5 +55,4 @@ export class FishingService implements OnStart, OnInit {
 	public getFishingIntervalTime(): number {
 		return this.fishingInterval;
 	}
->>>>>>> 023cc70605f19123ff5b5935ff0efbb0a300254c
 }
