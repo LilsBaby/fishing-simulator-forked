@@ -31,8 +31,10 @@
     "@rbxts/better-janitor": "^0.4.0",
     "@rbxts/cmdr": "^1.12.1",
     "@rbxts/ecr": "^0.8.0-ts.2",
+    "@rbxts/fusion": "^0.2.0",
     "@rbxts/janitor": "^1.17.0-ts.1",
     "@rbxts/lapis": "^0.3.6",
+    "@rbxts/lemon-signal": "^1.2.0",
     "@rbxts/log": "^0.6.3",
     "@rbxts/maid": "^1.1.0",
     "@rbxts/matter": "^0.8.5",
@@ -41,6 +43,8 @@
     "@rbxts/react": "^17.2.3",
     "@rbxts/react-roblox": "^17.2.3",
     "@rbxts/reflex": "^4.3.1",
-    "@rbxts/services": "^1.5.5"
+    "@rbxts/rewire": "^0.3.0",
+    "@rbxts/services": "^1.5.5",
+    "@rbxts/timer": "^0.0.9"
   }
 }
