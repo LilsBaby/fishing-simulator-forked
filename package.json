@@ -27,6 +27,8 @@
   "dependencies": {
     "@flamework/components": "^1.2.3",
     "@flamework/core": "^1.2.3",
-    "@flamework/networking": "^1.2.3"
+    "@flamework/networking": "^1.2.3",
+    "@rbxts/fusion": "^0.2.0",
+    "@rbxts/timer": "^0.0.9"
   }
 }
