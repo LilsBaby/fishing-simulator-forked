@@ -1,11 +1,11 @@
 export default class PlayerEntity {
-    private player: Player | undefined
+    private player: Player
 
-    constructor() {
-        
+    constructor(player: Player) {
+        this.player = player
     }
 
-    public getEntity(): Player | undefined {
+    public getEntity(): Player {
         return this.player
     }
 }
