@@ -8,6 +8,7 @@ import { Timer } from "@rbxts/timer";
 import { Events } from "server/network";
 import { Players, ReplicatedStorage } from "@rbxts/services";
 import Tree from "shared/packages/tree";
+import { number } from "@rbxts/react/src/prop-types";
 
 const Player = Players.LocalPlayer
 const character = Player.Character || Player.CharacterAdded.Wait()[0];
@@ -18,6 +19,7 @@ const fishingRange = 30;
 const fishingEvent = ReplicatedStorage.WaitForChild("FishingEvent") as RemoteEvent;
 
 const b = new Map<Player, PlayerEntity>();
+const maxCooldown = new Map<10, Timer>();
 
 @Service({})
 export class FishingService implements OnStart, OnInit {
@@ -79,21 +81,30 @@ export class FishingService implements OnStart, OnInit {
         switch(fishRarity) {
             case 2:
                 return "Uncommon";
-                break;
+                
             case 3:
                 return "Rare";
-                break;
+                
             case 4:
                 return "Epic";
-                break;
+                
             default:
                 return "Common";
-                break;
+                
         }
         return rarityType;
     }
 
     private setFishCooldown() {
+        this.fishingIntervalTimer.start()
+
+        const timerCooldown = maxCooldown.get(10) as Timer
+        if(this.getCurrentFishingIntervalTime(timerCooldown)) {
+
+        }
+        this.fishingIntervalTimer.completed.Connect(() => {
+            warn("10 seconds passed")
+        })
         return;
     }
 
