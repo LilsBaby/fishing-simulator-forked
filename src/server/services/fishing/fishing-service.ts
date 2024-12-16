@@ -26,10 +26,12 @@ export class FishingService implements OnStart, OnInit {
 
 	/** @ignore */
 	constructor() {
-		this.fishingInterval = 5;
+		this.fishingInterval = 10;
 		this.fishingIntervalTimer = new Timer(this.fishingInterval);
 
 		this.validator = new Conditioner.ConditionValidator();
+
+		
 	}
 
 	onStart() {}
