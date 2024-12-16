@@ -47,6 +47,8 @@ export class FishingService implements OnStart, OnInit {
 		this.fishingIntervalTimer = new Timer(this.fishingInterval);
 
 		this.validator = new Conditioner.ConditionValidator();
+
+		
 	}
 
 	onStart() {
