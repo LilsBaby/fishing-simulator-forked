@@ -1,14 +1,12 @@
 
 
 import PlayerEntity from "../player/player-entity";
-import { useEvent, useHookState } from "@rbxts/matter";
 import { Service, OnStart, OnInit } from "@flamework/core";
 import { Conditioner } from "shared/utils/conditioner";
 import { Timer } from "@rbxts/timer";
 import { Events } from "server/network";
 import { Players, ReplicatedStorage } from "@rbxts/services";
 import Tree from "shared/packages/tree";
-import { number } from "@rbxts/react/src/prop-types";
 
 const Player = Players.LocalPlayer
 const character = Player.Character || Player.CharacterAdded.Wait()[0];
